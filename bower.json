@@ -1,0 +1,18 @@
+{
+  "name": "sitioswebchile",
+  "description": "Redesign assessment for Acid",
+  "main": "index.js",
+  "authors": [
+    "Juanpablob <m.juanpablob@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/juanpablob/sitioswebchile",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

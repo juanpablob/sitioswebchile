@@ -1,0 +1,83 @@
+/**
+ * Jumbo
+ *
+ * @author Juanpablob <m.juanpablob@gmail.com>
+ * @desc Jumbo
+ * @since 2017-12-20
+ */
+
+.jumbo {
+	min-height: 400px;
+	padding-top: 100px;
+	background-image:
+		url('../images/bgr-jumbo.png'),
+		linear-gradient(to top, $light-blue, white);
+	background-size: cover;
+
+	@include element('intro') {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 250px;
+
+		h1,
+		p {
+			text-shadow: 0 0 40px white;
+		}
+
+		h1 {
+			margin: 0;
+		}
+		p {
+			margin: 0;
+			font-size: 18px;
+			font-weight: 300;
+
+			&:last-child {
+				margin-top: 25px;
+				text-shadow: none;
+			}
+		}
+	}
+
+	@include element('price') {
+		display: inline-block;
+		background: url('../images/obj-drawed-circle.png') center center no-repeat;
+		background-size: contain;
+		padding: 10px;
+		font-size: 23px;
+		font-weight: 600;
+		color: $green;
+	}
+
+	@include element('websites') {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	@include element('clients') {
+		padding: 25px 0;
+		border-top: 1px solid darken($light-blue, 3%);
+		background-color: $light-blue;
+
+		p {
+			margin: 0 0 20px;
+			font-size: 18px;
+			color: $graphite;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		@include element('intro') {
+			h1 {
+				margin-bottom: 4px;
+			}
+		}
+
+		@include element('price') {
+			padding: 0;
+		}
+	}
+}

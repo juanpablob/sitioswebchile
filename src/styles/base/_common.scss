@@ -1,0 +1,80 @@
+/**
+ * Common
+ *
+ * @author Juanpablob <m.juanpablob@gmail.com>
+ * @desc Common
+ * @since 2017-12-20
+ */
+
+// Logo
+.logo {
+	display: inline-block;
+	padding: 5px 8px;
+	border: 2px solid black;
+	border-radius: 10px;
+	background-color: white;
+	font-size: 21px;
+	text-decoration: none;
+	color: black;
+
+	&:hover {
+		background-color: black;
+		text-decoration: inherit;
+		color: white;
+	}
+
+	span {
+		font-weight: 700;
+	}
+
+	@include modifier('header') {
+		border-color: $purple;
+		color: $purple;
+
+		&:hover {
+			background-color: $purple;
+			color: white;
+		}
+	}
+}
+
+// Buttons
+.btn {
+	border-width: 0;
+	border-radius: 40px;
+}
+
+.btn-primary {
+	background-color: $purple;
+
+	&:hover {
+		background-color: darken($purple, 6%);
+	}
+	&:active,
+	&:focus:active {
+		outline: 0;
+		background-color: darken($purple, 10%);
+	}
+}
+
+.btn-success {
+	background-color: $green;
+
+	&:hover {
+		background-color: darken($green, 6%);
+	}
+	&:active,
+	&:focus:active {
+		outline: 0;
+		background-color: darken($green, 10%);
+	}
+}
+
+// Media
+.media {
+	@include element('pic') {
+		width: 100%;
+		height: auto;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	}
+}

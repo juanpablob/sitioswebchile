@@ -1,0 +1,24 @@
+/**
+ * Mixins
+ *
+ * @author Juanpablob <m.juanpablob@gmail.com>
+ * @desc Mixins
+ * @since 2017-12-20
+ */
+
+// Block element
+// @param {String} $element
+@mixin element($element) {
+	&__#{$element} {
+		@content;
+	}
+}
+
+// Block modifier
+// @access public
+// @param {String} $modifier
+@mixin modifier($modifier) {
+	&--#{$modifier} {
+		@content;
+	}
+}
